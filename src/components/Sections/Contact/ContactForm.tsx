@@ -33,23 +33,23 @@ const ContactForm: FC = memo(() => {
     async (event: React.FormEvent<HTMLFormElement>) => {
       event.preventDefault();
 
-      const res = await fetch("/api/sendgrid", {
-        body: JSON.stringify({
-          email: data.email,
-          name: data.name,
-          message: data.message,
-        }),
-        headers: {
-          "Content-Type": "application/json",
-        },
-        method: "POST",
-      });
+      // const res = await fetch("/api/sendgrid", {
+      //   body: JSON.stringify({
+      //     email: data.email,
+      //     name: data.name,
+      //     message: data.message,
+      //   }),
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      //   method: "POST",
+      // });
 
-      const {error} = await res.json();
-      if (error) {
-        console.log(error);
-        return;
-      }
+      // const {error} = await res.json();
+      // if (error) {
+      //   console.log(error);
+      //   return;
+      // }
       console.log('Data sent: ', data);
     },
     [data],
