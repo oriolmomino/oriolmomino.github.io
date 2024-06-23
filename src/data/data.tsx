@@ -96,9 +96,9 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
-  to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
-  in.`,
+  description: `I am a technology and sports enthusiast who thrives on ambitious challenges, both professionally and personally.
+  Passionate about programming, I enjoy working on everything from simple web pages to complex devices.
+  I value organization and effective methodologies to streamline my work.`,
   aboutItems: [
     {label: 'Location', text: 'Barcelona, Spain', Icon: MapIcon},
     {label: 'Nationality', text: 'Spanish', Icon: FlagIcon},

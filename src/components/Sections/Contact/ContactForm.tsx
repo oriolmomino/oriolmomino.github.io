@@ -32,10 +32,25 @@ const ContactForm: FC = memo(() => {
   const handleSendMessage = useCallback(
     async (event: React.FormEvent<HTMLFormElement>) => {
       event.preventDefault();
-      /**
-       * This is a good starting point to wire up your form submission logic
-       * */
-      console.log('Data to send: ', data);
+
+      const res = await fetch("/api/sendgrid", {
+        body: JSON.stringify({
+          email: data.email,
+          name: data.name,
+          message: data.message,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+        method: "POST",
+      });
+
+      const {error} = await res.json();
+      if (error) {
+        console.log(error);
+        return;
+      }
+      console.log('Data sent: ', data);
     },
     [data],
   );
