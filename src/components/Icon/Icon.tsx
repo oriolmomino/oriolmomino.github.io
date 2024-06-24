@@ -4,7 +4,7 @@ export interface IconProps extends React.HTMLAttributes<SVGSVGElement> {
   svgRef?: React.Ref<SVGSVGElement>;
   transform?: string;
   viewBox?: string;
-  width?: string;
+  width?: string | number;
 }
 
 const Icon: FC<IconProps> = memo(({children, className, svgRef, transform, viewBox, width, ...props}) => (
