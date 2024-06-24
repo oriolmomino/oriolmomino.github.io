@@ -7,10 +7,10 @@ import {
 } from '@heroicons/react/24/outline';
 import {
   EnvelopeIcon,
-  PhoneIcon
 } from '@heroicons/react/24/solid';
 
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
+import WhatsAppIcon from '../components/Icon/WhatsAppIcon';
 import heroImage from '../images/header-background.jpg';
 import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
 import porfolioImage2 from '../images/portfolio/portfolio-2.png';
@@ -328,9 +328,9 @@ export const contact: ContactSection = {
       href: 'mailto:momino.oriol@gmail.com',
     },
     {
-      type: ContactType.Phone,
+      type: ContactType.WhatsApp,
       text: '(+34) 627 761 613',
-      href: 'tel:+34627761613',
+      href: 'https://wa.me/34627761613',
     },
     {
       type: ContactType.LinkedIn,
@@ -350,6 +350,6 @@ export const contact: ContactSection = {
  */
 export const socialLinks: Social[] = [
   {label: 'Email', Icon: EnvelopeIcon, href: 'mailto:momino.oriol@gmail.com'},
-  {label: 'Phone', Icon: PhoneIcon, href: 'tel:+34627761613'},
+  {label: 'WhatsApp', Icon: WhatsAppIcon, href: 'https://wa.me/34627761613', target:'_blank'},
   {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/oriolmomino/', target: '_blank'},
 ];
