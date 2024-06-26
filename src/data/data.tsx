@@ -39,8 +39,8 @@ import {
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: "Oriol's resume",
-  description: "Personal website to share my work experience and skills",
+  title: "Oriol portfolio website",
+  description: "Personal website to share my work experience, education and skills",
 };
 
 /**
