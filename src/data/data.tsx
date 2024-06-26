@@ -22,6 +22,7 @@ import porfolioImage7 from '../images/portfolio/portfolio-7.jpg';
 import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.jpg';
 import testimonialImage1 from '../images/testimonial/testimonial-1.jpg';
+import testimonialImage2 from '../images/testimonial/testimonial-2.jpg';
 import {
   About,
   ContactSection,
@@ -310,6 +311,11 @@ export const testimonial: TestimonialSection = {
       name: 'Santiago Mesa',
       text: "Oriol demonstrates expertise in JS, PHP, data structure design, and cybersecurity, making him vital for early-stage projects. He's highly communicative, sharing his expertise to assist with tasks, clarify customer doubts, and design solutions. Working with him daily is a great experience.",
       image: testimonialImage1,
+    },
+    {
+      name: 'Oriol Conesa',
+      text: "Oriol has great analytical and technical skills, and he is always ready to execute with high performance. He is also an excellent colleague, his great personality makes it really easy to work with him. I'd be happy to work with him again!",
+      image: testimonialImage2,
     },
   ],
 };
