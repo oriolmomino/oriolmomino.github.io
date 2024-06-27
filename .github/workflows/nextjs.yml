@@ -24,11 +24,6 @@ concurrency:
   group: 'pages'
   cancel-in-progress: false
 
-env:
-  SENDGRID_API_KEY: ${{ vars.SENDGRID_API_KEY }}
-  SENDGRID_FROM: ${{ vars.SENDGRID_FROM }}
-  SENDGRID_TO: ${{ vars.SENDGRID_TO }}
-
 jobs:
   # Build job
   build:
@@ -96,3 +91,8 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Add environment variables
+        env:
+          SENDGRID_API_KEY: ${{ env.SENDGRID_API_KEY }}
+          SENDGRID_FROM: ${{ env.SENDGRID_FROM }}
+          SENDGRID_TO: ${{ env.SENDGRID_TO }}
