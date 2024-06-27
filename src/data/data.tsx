@@ -23,6 +23,7 @@ import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.jpg';
 import testimonialImage1 from '../images/testimonial/testimonial-1.jpg';
 import testimonialImage2 from '../images/testimonial/testimonial-2.jpg';
+import testimonialImage3 from '../images/testimonial/testimonial-3.jpg';
 import {
   About,
   ContactSection,
@@ -317,6 +318,11 @@ export const testimonial: TestimonialSection = {
       text: "Oriol has great analytical and technical skills, and he is always ready to execute with high performance. He is also an excellent colleague, his great personality makes it really easy to work with him. I'd be happy to work with him again!",
       image: testimonialImage2,
     },
+    {
+      name: 'Alejandro Galiana',
+      text: "I've worked with Oriol for over a year on various projects. His extensive knowledge in database structures, security, and PHP is impressive. Whenever I had backend issues, he explained everything clearly and made necessary API modifications promptly. Working with him has been a pleasant and effortless experience.",
+      image: testimonialImage3,
+    }
   ],
 };
 

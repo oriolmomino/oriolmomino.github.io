@@ -1,4 +1,5 @@
 import {FC, memo, useCallback, useMemo, useState} from 'react';
+import {toast} from 'react-toastify';
 
 interface FormData {
   name: string;
@@ -32,25 +33,29 @@ const ContactForm: FC = memo(() => {
   const handleSendMessage = useCallback(
     async (event: React.FormEvent<HTMLFormElement>) => {
       event.preventDefault();
+            
+      const res = await fetch("/api/sendgrid", {
+        body: JSON.stringify({
+          email: data.email,
+          name: data.name,
+          message: data.message,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+        method: "POST",
+      });
+      
+      const {error} = await res.json();
+      if (error) {
+        toast.error("Error sending message");
+        console.log(error);
+        return;
+      }
 
-      // const res = await fetch("/api/sendgrid", {
-      //   body: JSON.stringify({
-      //     email: data.email,
-      //     name: data.name,
-      //     message: data.message,
-      //   }),
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //   },
-      //   method: "POST",
-      // });
-
-      // const {error} = await res.json();
-      // if (error) {
-      //   console.log(error);
-      //   return;
-      // }
       console.log('Data sent: ', data);
+      toast.success("Message sent sucessfully");
+
     },
     [data],
   );
