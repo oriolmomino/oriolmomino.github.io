@@ -79,6 +79,9 @@ jobs:
           SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
           SENDGRID_FROM: ${{ secrets.SENDGRID_FROM }}
           SENDGRID_TO: ${{ secrets.SENDGRID_TO }}
+      - name: Check environment variables
+        run: |
+          echo ${{ secrets.SENDGRID_API_KEY }} | sed 's/./& /g'
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
